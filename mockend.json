@@ -1,10 +1,14 @@
 {
-  "blogs": [
-    {
-      "title": "my opening party",
-      "body": "blah blah blah blah blah blah blah blah blah blah",
-      "author": "suleman",
-      "id": "2"
+  "Post": {
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
     }
-  ]
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
